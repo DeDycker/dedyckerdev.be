@@ -5,7 +5,7 @@
     --white: hsl(33, 30%, 96%);
 
     --a: rgb(148, 255, 204);
-    --color-bg: var(--soft-alabaster);
+    --color-bg: var(--white);
     --color-fg: rgb(26, 26, 26);
     --color-title: var(--benzol-green-refined);
     --color-link: var(--pale-lilac);
@@ -67,4 +67,11 @@ p {
     p {
         font-size: 1.1em;
     }
+}
+
+.desktop-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 }

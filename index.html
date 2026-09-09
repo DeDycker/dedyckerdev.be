@@ -51,5 +51,44 @@
             </p>
             <p> I'm open to work on a contractual basis. Do not hesitate to <a href="mailto:cedric@dedyckerdev.be">contact me!</a></p>
         </main>
+        <script>
+            (() => {
+                const desktop = matchMedia(
+                    "(min-width: 1280px) and (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference)",
+                );
+
+                const boot = () => {
+                    if (window.extraSiteContent) {
+                        window.extraSiteContent.start();
+                        return;
+                    }
+                    const s = document.createElement("script");
+                    s.src = "desktop.js";
+                    s.onload = () => window.extraSiteContent.start();
+                    document.head.append(s);
+                };
+
+                const tryLoad = () => {
+                    const net = navigator.connection;
+                    if (
+                        !desktop.matches ||
+                        net?.saveData ||
+                        net?.effectiveType === "slow-2g" ||
+                        net?.effectiveType === "2g"
+                    ) {
+                        return;
+                    }
+                    desktop.removeEventListener("change", tryLoad);
+                    if ("requestIdleCallback" in window) {
+                        requestIdleCallback(boot, { timeout: 3000 });
+                    } else {
+                        addEventListener("load", boot, { once: true });
+                    }
+                };
+
+                desktop.addEventListener("change", tryLoad);
+                tryLoad();
+            })();
+        </script>
     </body>
 </html>
