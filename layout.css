@@ -1,0 +1,70 @@
+:root {
+    --benzol-green-refined: hsl(152, 60%, 28%);
+    --pale-lilac: hsl(270, 60%, 85%);
+    --black: rgb(26, 26, 26);
+    --white: hsl(33, 30%, 96%);
+
+    --a: rgb(148, 255, 204);
+    --color-bg: var(--soft-alabaster);
+    --color-fg: rgb(26, 26, 26);
+    --color-title: var(--benzol-green-refined);
+    --color-link: var(--pale-lilac);
+
+    font-size: 14px;
+}
+
+body {
+    padding: 5vh 10vw;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1 {
+    color: var(--color-title);
+    font-size: 4.5em;
+    margin-bottom: 1em;
+
+    font-family: "Permanent Marker", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+
+a {
+    color: var(--color-fg);
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 70%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: -0.1em;
+    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: var(--color-link);
+}
+a:hover:after {
+    top: 0%;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    max-width: 28em;
+    margin: 2em 0;
+}
+
+@media (max-width: 1280px) {
+    p {
+        font-size: 1.1em;
+    }
+}
