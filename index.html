@@ -1,94 +1,404 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Cédric De Dycker</title>
-        <meta
-            name="description"
-            content="Cédric De Dycker is a full stack software engineer who builds efficient, scalable cloud software."
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>DE DYCKER DEV · Cédric De Dycker</title>
+    <meta
+      name="description"
+      content="Cédric De Dycker is a full-stack software engineer in Belgium. Contract work: review, harden, and ship software that just works."
+    />
+    <meta name="theme-color" content="#0c0b09" />
+    <meta property="og:locale" content="en_BE" />
+    <meta property="og:site_name" content="Cédric De Dycker" />
+    <meta property="og:title" content="DE DYCKER DEV · Cédric De Dycker" />
+    <meta
+      property="og:description"
+      content="Cédric De Dycker is a full-stack software engineer in Belgium. Contract work: review, harden, and ship software that just works."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dedyckerdev.be/" />
+    <link rel="canonical" href="https://dedyckerdev.be" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <style>
+      html {
+        background: #0c0b09;
+        color-scheme: dark;
+      }
+    </style>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere__grid"></div>
+      <div class="atmosphere__spiral">
+        <svg viewBox="0 0 32 32">
+          <path
+            d="M23.8 16.2c.2-6.4-4.6-11.2-10.8-10.4C6.8 6.6 4 13.4 6.6 19c2.6 5.6 10 7 13.8 3.2 3.2-3.2 2.2-8.8-2-10.4-3.6-1.4-6.8 1.4-6.2 4.6.4 2.4 3 3.6 5 2.4"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="scribbles" aria-hidden="true"></div>
+    <template id="doodle-spiral">
+      <svg viewBox="0 0 32 32">
+        <path
+          pathLength="1"
+          d="M23.8 16.2c.2-6.4-4.6-11.2-10.8-10.4C6.8 6.6 4 13.4 6.6 19c2.6 5.6 10 7 13.8 3.2 3.2-3.2 2.2-8.8-2-10.4-3.6-1.4-6.8 1.4-6.2 4.6.4 2.4 3 3.6 5 2.4"
         />
-        <link rel="stylesheet" href="layout.css" />
-        <meta property="og:locale" content="en_BE" />
-        <meta property="og:site_name" content="Cédric De Dycker" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cédric De Dycker" />
-        <meta
-            property="og:description"
-            content="Cédric De Dycker is a full stack software engineer who builds efficient, scalable cloud software."
-        />
-        <meta property="og:url" content="https://dedyckerdev.be/" />
-        <link rel="canonical" href="https://dedyckerdev.be" />
+      </svg>
+    </template>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Permanent+Marker&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h1>CÉDRIC DE DYCKER</h1>
-        <main id="content">
-            <p>
-                Hi! I’m Cédric and I like building software. I’m a full stack
-                developer with an expertise in crafting efficient and scalable
-                cloud software that helps users accomplish their individual
-                goals either through automations or simplifying workflows. I
-                take personal pride in creating performant, reliable and correct
-                software; striving for “it just works”.
-            </p>
-            <p>
-                Currently I’m a full stack developer at
-                <a href="https://sparklink.be" target="_blank">Sparklink</a>
-                where I work on architecting and implementing highly scalable
-                business applications both on Salesforce and on Google Cloud.
-                Previously I focused on designing and implementing internal
-                tools for the project management team as well as our developers.
-            </p>
-            <p>
-                In my spare time I’m learning guitar, trying to broaden my music
-                collection, spending time with my girlfriend and two cats, and
-                hacking away on various hardware or old games.
-            </p>
-            <p> I'm open to work on a contractual basis. Do not hesitate to <a href="mailto:cedric@dedyckerdev.be">contact me!</a></p>
-        </main>
-        <script>
-            (() => {
-                const desktop = matchMedia(
-                    "(min-width: 1280px) and (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference)",
-                );
+    <a class="home" href="#top" id="top">
+      <span class="home__name">
+        <span>DE</span>
+        <span>DYCKER</span>
+      </span>
+      <span class="home__dev">DEV</span>
+    </a>
 
-                const boot = () => {
-                    if (window.extraSiteContent) {
-                        window.extraSiteContent.start();
-                        return;
-                    }
-                    const s = document.createElement("script");
-                    s.src = "desktop.js";
-                    s.onload = () => window.extraSiteContent.start();
-                    document.head.append(s);
-                };
+    <div class="stage">
+      <header class="intro">
+        <p class="tagline">Software that works.</p>
+        <h1 class="ident">
+          <span>Cédric De Dycker</span>
+          <span class="ident__sep" aria-hidden="true"></span>
+          <span data-i18n="role">Full-stack engineer @ Sparklink</span>
+        </h1>
+      </header>
 
-                const tryLoad = () => {
-                    const net = navigator.connection;
-                    if (
-                        !desktop.matches ||
-                        net?.saveData ||
-                        net?.effectiveType === "slow-2g" ||
-                        net?.effectiveType === "2g"
-                    ) {
-                        return;
-                    }
-                    desktop.removeEventListener("change", tryLoad);
-                    if ("requestIdleCallback" in window) {
-                        requestIdleCallback(boot, { timeout: 3000 });
-                    } else {
-                        addEventListener("load", boot, { once: true });
-                    }
-                };
+      <main class="story">
+        <p data-i18n="p1">
+          I build cloud software people use to get work done: automations when
+          the same steps keep coming back, clearer workflows when the process
+          itself is the drag. I aim for software that holds up in real use.
+        </p>
 
-                desktop.addEventListener("change", tryLoad);
-                tryLoad();
-            })();
-        </script>
-    </body>
+        <p>
+          <span data-i18n="p2a">On the side I take</span>
+          <a class="mark" href="mailto:cedric@dedyckerdev.be" data-i18n="contract"
+            >contract work</a
+          ><span data-i18n="p2b"
+            >: software development, websites, and consultancy. A lot of
+            AI-built tools reach “done” before they are ready for production.
+            Quality is uneven, security is thin, EU requirements get missed. I
+            review that work. Then I can fix it, harden it, and put it in the
+            cloud.</span
+          >
+        </p>
+
+        <p>
+          <span data-i18n="p3a">By day I work at</span>
+          <a
+            class="mark"
+            href="https://sparklink.be"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Sparklink<span class="sr">
+              (<span data-i18n="blank">opens in a new tab</span>)</span
+            ></a
+          ><span data-i18n="p3b"
+            >, architecting and implementing business applications on Salesforce
+            and Google Cloud.</span
+          >
+        </p>
+
+        <p data-i18n="p4">
+          Away from the keyboard: learning guitar, growing a music collection,
+          time with my girlfriend and two cats, tinkering with hardware and old
+          games.
+        </p>
+
+        <p class="sign">
+          <span data-i18n="sign">Need something looked at?</span>
+          <a class="mark" href="mailto:cedric@dedyckerdev.be" data-i18n="write"
+            >Write me</a
+          >.
+        </p>
+      </main>
+    </div>
+
+    <nav class="dock" aria-label="Now">
+      <ul class="dock__list">
+        <li class="dock__item">
+          <span class="dock__ico" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14">
+              <circle cx="8" cy="8" r="5.25" fill="none" stroke="currentColor" stroke-width="1.25"/>
+              <path d="M8 2.75v10.5M2.75 8h10.5M4.1 4.1c1.3 1.2 2.6 1.8 3.9 1.8s2.6-.6 3.9-1.8M4.1 11.9c1.3-1.2 2.6-1.8 3.9-1.8s2.6.6 3.9 1.8" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            </svg>
+          </span>
+          <span data-i18n="belgium">Belgium</span>
+        </li>
+        <li class="dock__item">
+          <span class="dock__ico" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14">
+              <path d="M2.75 3.5h7.5a1 1 0 0 1 1 1v4.25a1 1 0 0 1-1 1H7.1L4.4 12.1V9.75H2.75a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+              <path d="M11.6 6.85h1.65a1 1 0 0 1 1 1v3.1a1 1 0 0 1-1 1h-1.35l-1.7 1.45v-1.45h-.4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="langs" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="nl" aria-pressed="false">NL</button>
+          </div>
+        </li>
+        <li class="dock__item">
+          <span class="dock__ico" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14">
+              <rect x="2.25" y="3.5" width="11.5" height="9" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.25"/>
+              <path d="M2.6 4.2 8 8.4l5.4-4.2" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            </svg>
+          </span>
+          <a class="mark" href="mailto:cedric@dedyckerdev.be" data-i18n="write"
+            >Write me</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      (() => {
+        const copy = {
+          en: {
+            role: "Full-stack engineer @ Sparklink",
+            p1: "I build cloud software people use to get work done: automations when the same steps keep coming back, clearer workflows when the process itself is the drag. I aim for software that holds up in real use.",
+            p2a: "I am open to take",
+            contract: "contract work",
+            p2b: ": software development, websites, and consultancy. Need help with your project? Let's talk.",
+            p3a: "By day I work at",
+            p3b: ", architecting and implementing business applications on Salesforce and Google Cloud.",
+            p4: "Away from the keyboard: learning guitar, growing a music collection, time with my girlfriend and two cats, tinkering with hardware and old games.",
+            sign: "Need something looked at?",
+            write: "Write me",
+            belgium: "Belgium",
+            langs: "Language",
+            blank: "opens in a new tab",
+            desc: "Cédric De Dycker is a full-stack software engineer in Belgium. Contract work: review, harden, and ship software that works.",
+          },
+          fr: {
+            role: "Ingénieur full-stack @ Sparklink",
+            p1: "Je construis des logiciels qui aident vraiment à avancer : des automatisations quand les mêmes étapes reviennent, des parcours plus clairs quand c’est le process qui coince. Ce qui compte, c’est un logiciel qui tient dans le quotidien.",
+            p2a: "Je suis ouvert à prendre",
+            contract: "du freelance work",
+            p2b: " : développement, sites, conseil. Besoin d'aide avec votre projet ? Parlons-en.",
+            p3a: "La journée, je travaille chez",
+            p3b: ", où je conçois et développe des applications métier sur Salesforce et Google Cloud.",
+            p4: "Quand je n’ai pas d’écran devant moi : j’apprends la guitare, j’empile les disques, je passe du temps avec ma copine et nos deux chats, je bricole du hardware et de vieux jeux.",
+            sign: "Un projet à regarder ?",
+            write: "Écrivez-moi",
+            belgium: "Belgique",
+            langs: "Langue",
+            blank: "s’ouvre dans un nouvel onglet",
+            desc: "Cédric De Dycker est ingénieur full-stack en Belgique. Freelance : relire un logiciel, le rendre solide, le mettre en production.",
+          },
+          nl: {
+            role: "Full-stack engineer @ Sparklink",
+            p1: "Ik bouw cloudsoftware die mensen vooruithelpt: automatisaties als dezelfde stappen blijven terugkomen, helderdere workflows als het proces zelf in de weg zit. Wat telt, is software die het uithoudt in het echte werk.",
+            p2a: "Ik sta open voor",
+            contract: "freelancewerk",
+            p2b: ": software, websites en advies. Heb je hulp nodig met je project? Laten we praten.",
+            p3a: "Overdag werk ik bij",
+            p3b: ", waar ik bedrijfsapplicaties ontwerp en bouw op Salesforce en Google Cloud.",
+            p4: "Als ik niet achter een scherm zit: gitaar leren spelen, muziek verzamelen, tijd met mijn vriendin en onze twee katten, knutselen aan hardware en oude games.",
+            sign: "Iets dat nagekeken moet worden?",
+            write: "Mail me",
+            belgium: "België",
+            langs: "Taal",
+            blank: "opent in een nieuw tabblad",
+            desc: "Cédric De Dycker is full-stack software engineer in België. Freelancewerk: nakijken, steviger maken en software die gewoon werkt.",
+          },
+        };
+
+        const buttons = [...document.querySelectorAll("[data-lang]")];
+        const group = document.querySelector(".langs");
+        const desc = document.querySelector('meta[name="description"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const allowed = new Set(["en", "fr", "nl"]);
+
+        const read = () => {
+          const fromUrl = new URLSearchParams(location.search).get("lang");
+          if (allowed.has(fromUrl)) return fromUrl;
+          try {
+            const stored = localStorage.getItem("lang");
+            if (allowed.has(stored)) return stored;
+          } catch {
+            /* ignore */
+          }
+          return "en";
+        };
+
+        const apply = (lang) => {
+          const strings = copy[lang];
+          if (!strings) return;
+
+          document.documentElement.lang = lang;
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            if (key && strings[key]) el.textContent = strings[key];
+          });
+          if (desc) desc.setAttribute("content", strings.desc);
+          if (ogDesc) ogDesc.setAttribute("content", strings.desc);
+          if (group) group.setAttribute("aria-label", strings.langs);
+
+          buttons.forEach((btn) => {
+            btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
+          });
+
+          try {
+            localStorage.setItem("lang", lang);
+          } catch {
+            /* ignore */
+          }
+
+          const url = new URL(location.href);
+          if (lang === "en") url.searchParams.delete("lang");
+          else url.searchParams.set("lang", lang);
+          history.replaceState(null, "", url);
+        };
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lang = btn.dataset.lang;
+            if (allowed.has(lang)) apply(lang);
+          });
+        });
+
+        apply(read());
+
+        const SIZE_MIN = 2.5;
+        const SIZE_MAX = 12.6;
+        const WAIT_MIN = 16;
+        const WAIT_MAX = 35;
+        const HOLD_MIN = 2.8;
+        const HOLD_MAX = 7;
+
+        const doodleRoot = document.querySelector(".scribbles");
+        const tpl = document.getElementById("doodle-spiral");
+        const wide = window.matchMedia("(min-width: 721px)");
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const rand = (min, max) => min + Math.random() * (max - min);
+        let doodles = [];
+        let gate = 0;
+
+        const hidden = (x, y) => {
+          const logo = x < 230 && y < 78;
+          const dock =
+            Math.abs(x - innerWidth / 2) < 240 && y > innerHeight - 86;
+          return logo || dock;
+        };
+
+        const scramble = (el) => {
+          if (!tpl) return;
+
+          el.className = "scribble";
+          const size = rand(SIZE_MIN, SIZE_MAX);
+          el.style.setProperty("--size", `${size}rem`);
+          el.replaceChildren(tpl.content.cloneNode(true));
+
+          const box = size * 16 + 48;
+          const pad = 16;
+          const siblings = [...doodleRoot.children].filter((node) => node !== el);
+          let x = pad;
+          let y = pad;
+          for (let i = 0; i < 18; i += 1) {
+            x = rand(pad, Math.max(pad + 1, innerWidth - box));
+            y = rand(pad, Math.max(pad + 1, innerHeight - box));
+            if (hidden(x, y)) continue;
+            const near = siblings.some((node) => {
+              const dx = parseFloat(node.style.left) - x;
+              const dy = parseFloat(node.style.top) - y;
+              return Math.hypot(dx, dy) < box * 0.7;
+            });
+            if (!near) break;
+          }
+
+          el.style.left = `${x}px`;
+          el.style.top = `${y}px`;
+          el.style.transform = `rotate(${rand(-26, 26)}deg)`;
+        };
+
+        const stopDoodles = () => {
+          doodles.forEach((item) => {
+            clearTimeout(item.timer);
+            item.el.remove();
+          });
+          doodles = [];
+          gate = 0;
+          if (doodleRoot) doodleRoot.replaceChildren();
+        };
+
+        const bookSlot = (wanted) => {
+          const now = performance.now();
+          const start = Math.max(now + wanted, gate);
+          const gap = Math.max(WAIT_MIN, HOLD_MAX + 6) * 1000;
+          gate = start + gap;
+          return start - now;
+        };
+
+        const cycle = (item) => {
+          const rest = () => {
+            item.el.classList.remove("is-lit");
+            item.timer = setTimeout(() => {
+              scramble(item.el);
+              shine();
+            }, bookSlot(rand(WAIT_MIN, WAIT_MAX) * 1000));
+          };
+          const shine = () => {
+            item.el.classList.add("is-lit");
+            item.timer = setTimeout(rest, rand(HOLD_MIN, HOLD_MAX) * 1000);
+          };
+          item.timer = setTimeout(() => {
+            scramble(item.el);
+            shine();
+          }, bookSlot(rand(WAIT_MIN, WAIT_MAX) * 1000));
+        };
+
+        const startDoodles = () => {
+          stopDoodles();
+          if (!doodleRoot || !wide.matches) return;
+
+          const count = reduce.matches ? 3 : 4;
+          for (let i = 0; i < count; i += 1) {
+            const el = document.createElement("span");
+            scramble(el);
+            doodleRoot.append(el);
+            const item = { el, timer: 0 };
+            doodles.push(item);
+            if (!reduce.matches) cycle(item);
+          }
+        };
+
+        const pinBackdrop = () => {
+          const spiral = document.querySelector(".atmosphere__spiral");
+          const content =
+            document.querySelector(".story") || document.querySelector(".stage");
+          if (!spiral || !content) return;
+          const box = content.getBoundingClientRect();
+          spiral.style.left = `${box.right}px`;
+          spiral.style.top = `${box.bottom}px`;
+        };
+
+        startDoodles();
+        pinBackdrop();
+        addEventListener("resize", pinBackdrop);
+        addEventListener("load", pinBackdrop);
+        wide.addEventListener("change", startDoodles);
+        reduce.addEventListener("change", startDoodles);
+        addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            doodles.forEach((item) => {
+              clearTimeout(item.timer);
+              item.el.classList.remove("is-lit");
+            });
+            return;
+          }
+          startDoodles();
+        });
+      })();
+    </script>
+  </body>
 </html>
