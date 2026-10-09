@@ -9,7 +9,7 @@
     <title>DE DYCKER DEV · Cédric De Dycker</title>
     <meta
       name="description"
-      content="Cédric De Dycker is a full-stack software engineer in Belgium. Contract work: review, harden, and ship software that just works."
+      content="Cédric De Dycker is a full-stack software engineer in Belgium. Open to contract work: software development, websites, and consultancy."
     />
     <meta name="theme-color" content="#0c0b09" />
     <meta property="og:locale" content="en_BE" />
@@ -17,7 +17,7 @@
     <meta property="og:title" content="DE DYCKER DEV · Cédric De Dycker" />
     <meta
       property="og:description"
-      content="Cédric De Dycker is a full-stack software engineer in Belgium. Contract work: review, harden, and ship software that just works."
+      content="Cédric De Dycker is a full-stack software engineer in Belgium. Open to contract work: software development, websites, and consultancy."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dedyckerdev.be/" />
@@ -33,7 +33,6 @@
   </head>
   <body>
     <div class="atmosphere" aria-hidden="true">
-      <div class="atmosphere__grid"></div>
       <div class="atmosphere__spiral">
         <svg viewBox="0 0 32 32">
           <path
@@ -43,32 +42,10 @@
       </div>
     </div>
 
-    <div class="scribbles" aria-hidden="true"></div>
-    <template id="doodle-spiral">
-      <svg viewBox="0 0 32 32">
-        <path
-          pathLength="1"
-          d="M23.8 16.2c.2-6.4-4.6-11.2-10.8-10.4C6.8 6.6 4 13.4 6.6 19c2.6 5.6 10 7 13.8 3.2 3.2-3.2 2.2-8.8-2-10.4-3.6-1.4-6.8 1.4-6.2 4.6.4 2.4 3 3.6 5 2.4"
-        />
-      </svg>
-    </template>
-
-    <a class="home" href="#top" id="top">
-      <span class="home__name">
-        <span>DE</span>
-        <span>DYCKER</span>
-      </span>
-      <span class="home__dev">DEV</span>
-    </a>
-
     <div class="stage">
       <header class="intro">
-        <p class="tagline">Software that works.</p>
-        <h1 class="ident">
-          <span>Cédric De Dycker</span>
-          <span class="ident__sep" aria-hidden="true"></span>
-          <span data-i18n="role">Full-stack engineer @ Sparklink</span>
-        </h1>
+        <h1 class="name">Cédric De&nbsp;Dycker</h1>
+        <p class="role" data-i18n="role">Full-stack engineer&nbsp;@&nbsp;Sparklink, freelance&nbsp;@&nbsp;dedyckerdev.be</p>
       </header>
 
       <main class="story">
@@ -79,15 +56,12 @@
         </p>
 
         <p>
-          <span data-i18n="p2a">On the side I take</span>
+          <span data-i18n="p2a">I’m open to</span>
           <a class="mark" href="mailto:cedric@dedyckerdev.be" data-i18n="contract"
             >contract work</a
           ><span data-i18n="p2b"
-            >: software development, websites, and consultancy. A lot of
-            AI-built tools reach “done” before they are ready for production.
-            Quality is uneven, security is thin, EU requirements get missed. I
-            review that work. Then I can fix it, harden it, and put it in the
-            cloud.</span
+            >: software development, websites, and consultancy. Need help with
+            your project? Let’s talk.</span
           >
         </p>
 
@@ -111,13 +85,6 @@
           Away from the keyboard: learning guitar, growing a music collection,
           time with my girlfriend and two cats, tinkering with hardware and old
           games.
-        </p>
-
-        <p class="sign">
-          <span data-i18n="sign">Need something looked at?</span>
-          <a class="mark" href="mailto:cedric@dedyckerdev.be" data-i18n="write"
-            >Write me</a
-          >.
         </p>
       </main>
     </div>
@@ -164,39 +131,37 @@
       (() => {
         const copy = {
           en: {
-            role: "Full-stack engineer @ Sparklink",
+            role: "Full-stack engineer\u00a0@\u00a0Sparklink, freelance\u00a0@\u00a0dedyckerdev.be",
             p1: "I build cloud software people use to get work done: automations when the same steps keep coming back, clearer workflows when the process itself is the drag. I aim for software that holds up in real use.",
-            p2a: "I am open to take",
+            p2a: "I’m open to",
             contract: "contract work",
-            p2b: ": software development, websites, and consultancy. Need help with your project? Let's talk.",
+            p2b: ": software development, websites, and consultancy. Need help with your project? Let’s talk.",
             p3a: "By day I work at",
             p3b: ", architecting and implementing business applications on Salesforce and Google Cloud.",
             p4: "Away from the keyboard: learning guitar, growing a music collection, time with my girlfriend and two cats, tinkering with hardware and old games.",
-            sign: "Need something looked at?",
             write: "Write me",
             belgium: "Belgium",
             langs: "Language",
             blank: "opens in a new tab",
-            desc: "Cédric De Dycker is a full-stack software engineer in Belgium. Contract work: review, harden, and ship software that works.",
+            desc: "Cédric De Dycker is a full-stack software engineer in Belgium. Open to contract work: software development, websites, and consultancy.",
           },
           fr: {
-            role: "Ingénieur full-stack @ Sparklink",
+            role: "Ingénieur full-stack\u00a0@\u00a0Sparklink, freelance\u00a0@\u00a0dedyckerdev.be",
             p1: "Je construis des logiciels qui aident vraiment à avancer : des automatisations quand les mêmes étapes reviennent, des parcours plus clairs quand c’est le process qui coince. Ce qui compte, c’est un logiciel qui tient dans le quotidien.",
-            p2a: "Je suis ouvert à prendre",
-            contract: "du freelance work",
-            p2b: " : développement, sites, conseil. Besoin d'aide avec votre projet ? Parlons-en.",
+            p2a: "Je suis disponible pour",
+            contract: "des missions en freelance",
+            p2b: " : développement, sites, conseil. Besoin d’aide avec votre projet ? Parlons-en.",
             p3a: "La journée, je travaille chez",
             p3b: ", où je conçois et développe des applications métier sur Salesforce et Google Cloud.",
             p4: "Quand je n’ai pas d’écran devant moi : j’apprends la guitare, j’empile les disques, je passe du temps avec ma copine et nos deux chats, je bricole du hardware et de vieux jeux.",
-            sign: "Un projet à regarder ?",
             write: "Écrivez-moi",
             belgium: "Belgique",
             langs: "Langue",
             blank: "s’ouvre dans un nouvel onglet",
-            desc: "Cédric De Dycker est ingénieur full-stack en Belgique. Freelance : relire un logiciel, le rendre solide, le mettre en production.",
+            desc: "Cédric De Dycker est ingénieur full-stack en Belgique. Disponible pour des missions en freelance : développement, sites, conseil.",
           },
           nl: {
-            role: "Full-stack engineer @ Sparklink",
+            role: "Full-stack engineer\u00a0@\u00a0Sparklink, freelance\u00a0@\u00a0dedyckerdev.be",
             p1: "Ik bouw cloudsoftware die mensen vooruithelpt: automatisaties als dezelfde stappen blijven terugkomen, helderdere workflows als het proces zelf in de weg zit. Wat telt, is software die het uithoudt in het echte werk.",
             p2a: "Ik sta open voor",
             contract: "freelancewerk",
@@ -204,12 +169,11 @@
             p3a: "Overdag werk ik bij",
             p3b: ", waar ik bedrijfsapplicaties ontwerp en bouw op Salesforce en Google Cloud.",
             p4: "Als ik niet achter een scherm zit: gitaar leren spelen, muziek verzamelen, tijd met mijn vriendin en onze twee katten, knutselen aan hardware en oude games.",
-            sign: "Iets dat nagekeken moet worden?",
             write: "Mail me",
             belgium: "België",
             langs: "Taal",
             blank: "opent in een nieuw tabblad",
-            desc: "Cédric De Dycker is full-stack software engineer in België. Freelancewerk: nakijken, steviger maken en software die gewoon werkt.",
+            desc: "Cédric De Dycker is full-stack software engineer in België. Staat open voor freelancewerk: software, websites en advies.",
           },
         };
 
@@ -269,109 +233,6 @@
 
         apply(read());
 
-        const SIZE_MIN = 2.5;
-        const SIZE_MAX = 12.6;
-        const WAIT_MIN = 16;
-        const WAIT_MAX = 35;
-        const HOLD_MIN = 2.8;
-        const HOLD_MAX = 7;
-
-        const doodleRoot = document.querySelector(".scribbles");
-        const tpl = document.getElementById("doodle-spiral");
-        const wide = window.matchMedia("(min-width: 721px)");
-        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-        const rand = (min, max) => min + Math.random() * (max - min);
-        let doodles = [];
-        let gate = 0;
-
-        const hidden = (x, y) => {
-          const logo = x < 230 && y < 78;
-          const dock =
-            Math.abs(x - innerWidth / 2) < 240 && y > innerHeight - 86;
-          return logo || dock;
-        };
-
-        const scramble = (el) => {
-          if (!tpl) return;
-
-          el.className = "scribble";
-          const size = rand(SIZE_MIN, SIZE_MAX);
-          el.style.setProperty("--size", `${size}rem`);
-          el.replaceChildren(tpl.content.cloneNode(true));
-
-          const box = size * 16 + 48;
-          const pad = 16;
-          const siblings = [...doodleRoot.children].filter((node) => node !== el);
-          let x = pad;
-          let y = pad;
-          for (let i = 0; i < 18; i += 1) {
-            x = rand(pad, Math.max(pad + 1, innerWidth - box));
-            y = rand(pad, Math.max(pad + 1, innerHeight - box));
-            if (hidden(x, y)) continue;
-            const near = siblings.some((node) => {
-              const dx = parseFloat(node.style.left) - x;
-              const dy = parseFloat(node.style.top) - y;
-              return Math.hypot(dx, dy) < box * 0.7;
-            });
-            if (!near) break;
-          }
-
-          el.style.left = `${x}px`;
-          el.style.top = `${y}px`;
-          el.style.transform = `rotate(${rand(-26, 26)}deg)`;
-        };
-
-        const stopDoodles = () => {
-          doodles.forEach((item) => {
-            clearTimeout(item.timer);
-            item.el.remove();
-          });
-          doodles = [];
-          gate = 0;
-          if (doodleRoot) doodleRoot.replaceChildren();
-        };
-
-        const bookSlot = (wanted) => {
-          const now = performance.now();
-          const start = Math.max(now + wanted, gate);
-          const gap = Math.max(WAIT_MIN, HOLD_MAX + 6) * 1000;
-          gate = start + gap;
-          return start - now;
-        };
-
-        const cycle = (item) => {
-          const rest = () => {
-            item.el.classList.remove("is-lit");
-            item.timer = setTimeout(() => {
-              scramble(item.el);
-              shine();
-            }, bookSlot(rand(WAIT_MIN, WAIT_MAX) * 1000));
-          };
-          const shine = () => {
-            item.el.classList.add("is-lit");
-            item.timer = setTimeout(rest, rand(HOLD_MIN, HOLD_MAX) * 1000);
-          };
-          item.timer = setTimeout(() => {
-            scramble(item.el);
-            shine();
-          }, bookSlot(rand(WAIT_MIN, WAIT_MAX) * 1000));
-        };
-
-        const startDoodles = () => {
-          stopDoodles();
-          if (!doodleRoot || !wide.matches) return;
-
-          const count = reduce.matches ? 3 : 4;
-          for (let i = 0; i < count; i += 1) {
-            const el = document.createElement("span");
-            scramble(el);
-            doodleRoot.append(el);
-            const item = { el, timer: 0 };
-            doodles.push(item);
-            if (!reduce.matches) cycle(item);
-          }
-        };
-
         const pinBackdrop = () => {
           const spiral = document.querySelector(".atmosphere__spiral");
           const content =
@@ -382,22 +243,9 @@
           spiral.style.top = `${box.bottom}px`;
         };
 
-        startDoodles();
         pinBackdrop();
         addEventListener("resize", pinBackdrop);
         addEventListener("load", pinBackdrop);
-        wide.addEventListener("change", startDoodles);
-        reduce.addEventListener("change", startDoodles);
-        addEventListener("visibilitychange", () => {
-          if (document.hidden) {
-            doodles.forEach((item) => {
-              clearTimeout(item.timer);
-              item.el.classList.remove("is-lit");
-            });
-            return;
-          }
-          startDoodles();
-        });
       })();
     </script>
   </body>
